@@ -1,33 +1,60 @@
-import React, { type Dispatch, type SetStateAction } from 'react';
-import type { ItechnologiesType } from '../Type/TechnologiesType';
-import TechnologiesCard from './TechnologiesCard';
+import type { Dispatch, SetStateAction } from "react";
+import type { ItechnologiesType } from "../Type/TechnologiesType";
+import SelectedTechCard from "./SelectedTechCard";
 
-interface TechnologiesCardProps {
-    technologies: ItechnologiesType;
+interface SelectedTechProps {
     selectedTechnologies: ItechnologiesType[];
-    setSelectedTechnologies:Dispatch<SetStateAction<ItechnologiesType[]>>;
+    setSelectedTechnologies: Dispatch<
+    SetStateAction<ItechnologiesType[]>>;
 }
 
-const SelectedTech = ({ technologies, selectedTechnologies, setSelectedTechnologies }: { technologies: ItechnologiesType[]}) => {
-    // console.log(selectedTechnologies, "from techno");
+const SelectedTech = ({
+    selectedTechnologies,
+    setSelectedTechnologies,
+}: SelectedTechProps) => {
+    const removeTechnology = (id: number) => {
+    setSelectedTechnologies((technologies) =>
+        technologies.filter((technology) => technology.id !== id)
+    );
+    };
+
     return (
-        <div>
-            <h2 className="text-xl font-bold mb-1">Your stack</h2>
-            <p className="text-gray-400">No technologies selected yet.</p>
+    <div>
+        <h2 className="mb-1 text-xl font-bold">
+        Your Stack
+        </h2>
 
-            {selectedTechnologies.map((technology, index) => (
-                <div key={index}>
-                    <TechnologiesCard
-                        technology={technology}
-                        selectedTechnologies={selectedTechnologies}
-                        setSelectedTechnologies={setSelectedTechnologies}
-                    />
-                </div>
-            ))}
+        <p className="mb-5 text-sm text-gray-400">
+        {selectedTechnologies.length} Technology
+        {selectedTechnologies.length !== 1 ? "ies" : "y"} Selected
+        </p>
 
-            <p className="text-gray-400 border border-gray-300 rounded-md p-2 text-center mt-6">
-            Your stack is empty.</p>
+        <div className="space-y-2">
+        {selectedTechnologies.length === 0 ? (
+            <p className="rounded-lg border border-gray-200 p-3 text-center text-sm text-gray-400">
+            Your stack is empty.
+            </p>
+            ) : (
+            selectedTechnologies.map((technology) => (
+            <SelectedTechCard
+            key={technology.id}
+                technology={technology}
+                onRemove={removeTechnology}
+            />
+            ))
+        )}
         </div>
+
+      {/* Remove All */}
+        {selectedTechnologies.length > 0 && (
+        <button
+            onClick={() => setSelectedTechnologies([])}
+            className="mt-6 w-full rounded-lg border border-red-300 py-2 text-sm font-medium text-red-500 transition hover:bg-red-50"
+        >
+            Remove All
+        </button>
+        )}
+    </div>
     );
 };
 

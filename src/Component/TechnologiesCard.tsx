@@ -92,8 +92,8 @@ const handleAddToStack = () => {
 
         {/* Add to Stack Button */}
         <button
-          onClick={handleAddToStack}
-            className="w-full rounded-lg bg-[#080d1c] py-2 text-xs font-medium text-white transition-all duration-300 hover:bg-linear-to-r from-[#F97316] to-[#EC4899] active:scale-95 disabled:cursor-not-allowed disabled:bg-gray-400"
+        onClick={handleAddToStack}
+            className="w-full rounded-lg bg-[#080d1c] py-2 text-xs font-medium text-white transition-all duration-300 hover:bg-linear-to-r from-[#F97316] to-[#EC4899] active:scale-95 disabled:cursor-not-allowed disabled:bg-gray-400 cursor-pointer"
             disabled={isSelected}>
             {isSelected ? "Added to stack" : "Add to Stack"}
         </button>

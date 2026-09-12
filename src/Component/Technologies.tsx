@@ -11,7 +11,7 @@ const Technologies = ({TechnologiesPromise}: TechnologiesProps) => {
 
 const technologies = use(TechnologiesPromise);
 
-const [selectedTechnologies, setSelectedTechnologies] = useState([]);
+const [selectedTechnologies, setSelectedTechnologies] = useState<ItechnologiesType[]>([]);
 
 // console.log(technologies);
 
@@ -23,8 +23,10 @@ const [selectedTechnologies, setSelectedTechnologies] = useState([]);
                 <p className="text-lg text-gray-600">
                 Pick one technology per category to build your ideal stack. </p>
             </div>
-            <div className="flex justify-around gap-4 mt-6">
-                <div className="grid grid-cols-3 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+            <div className="grid grid-cols-4 gap-6 my-6">
+                
+                <div className="col-span-3">
+                    <div className="grid grid-cols-3 gap-5">
                     {technologies.map((technology) => (
                     <TechnologiesCard
                         key={technology.id}
@@ -34,8 +36,9 @@ const [selectedTechnologies, setSelectedTechnologies] = useState([]);
                     />
                     ))}
                 </div>
-                <div className="border border-gray-200 rounded-lg p-6 w-1/3">
-                    <SelectedTech technologies={technologies} selectedTechnologies={selectedTechnologies} setSelectedTechnologies={setSelectedTechnologies} />
+                </div>
+                <div className="col-span-1 border border-gray-200 rounded-2xl p-4">
+                    <SelectedTech selectedTechnologies={selectedTechnologies} setSelectedTechnologies={setSelectedTechnologies} />
                 </div>
             </div>
         </div>
