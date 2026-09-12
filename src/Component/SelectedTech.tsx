@@ -25,8 +25,8 @@ const SelectedTech = ({
         </h2>
 
         <p className="mb-5 text-sm text-gray-400">
-        {selectedTechnologies.length} Technology
-        {selectedTechnologies.length !== 1 ? "ies" : "y"} Selected
+        {selectedTechnologies.length}{" "}
+        {selectedTechnologies.length === 1 ? "Technology" : "Technologies"} Selected
         </p>
 
         <div className="space-y-2">

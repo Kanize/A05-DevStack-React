@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import { use, useState } from 'react';
 import type { ItechnologiesType } from '../Type/TechnologiesType';
 import TechnologiesCard from './TechnologiesCard';
 import SelectedTech from './SelectedTech';
@@ -18,7 +18,7 @@ const [selectedTechnologies, setSelectedTechnologies] = useState<ItechnologiesTy
     return (
         <div className="container mx-auto">
             <div>
-                <h2 className="text-3xl font-bold mb-4">Explore the <span className="text-gradient bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold mb-4">Explore the <span className="text-gradient bg-linear-to-r from-red-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
                 Technologies</span></h2>
                 <p className="text-lg text-gray-600">
                 Pick one technology per category to build your ideal stack. </p>

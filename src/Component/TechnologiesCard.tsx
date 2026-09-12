@@ -62,7 +62,7 @@ const handleAddToStack = () => {
         </h3>
 
       {/* Description */}
-        <p className="mt-1 min-h-[48px] text-xs leading-5 text-gray-500">
+        <p className="mt-1 min-h-12 text-xs leading-5 text-gray-500">
         {technology.description}
         </p>
 

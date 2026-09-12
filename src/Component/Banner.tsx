@@ -1,4 +1,3 @@
-import React from 'react';
 import heroImg from '../assets/banner-stack.png'
 
 const Banner = () => {
@@ -6,7 +5,7 @@ const Banner = () => {
         <div className="flex flex-col md:flex-row justify-between items-center p-4 container mx-auto">
             <div>
                 <h1 className="text-4xl md:text-6xl font-extrabold">Build Your Ideal</h1>
-                <h1 className=" text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+                <h1 className=" text-4xl md:text-6xl font-extrabold bg-linear-to-r from-red-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
                     Development Stack
                     </h1>
                 <p className="text-lg md:text-xl text-gray-600 my-4">
