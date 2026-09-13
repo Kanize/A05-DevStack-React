@@ -23,7 +23,7 @@ const [selectedTechnologies, setSelectedTechnologies] = useState<ItechnologiesTy
                 <p className="text-lg text-gray-600">
                 Pick one technology per category to build your ideal stack. </p>
             </div>
-            <div className="grid grid-cols-4 gap-6 my-6">
+            <div className="grid grid-cols-4 gap-6 mt-6 mb-16">
                 
                 <div className="col-span-3">
                     <div className="grid grid-cols-3 gap-5">
@@ -37,7 +37,7 @@ const [selectedTechnologies, setSelectedTechnologies] = useState<ItechnologiesTy
                     ))}
                 </div>
                 </div>
-                <div className="col-span-1 border border-gray-200 rounded-2xl p-4">
+                <div className="col-span-1 border border-gray-200 rounded-2xl p-4 h-fit self-start">
                     <SelectedTech selectedTechnologies={selectedTechnologies} setSelectedTechnologies={setSelectedTechnologies} />
                 </div>
             </div>
