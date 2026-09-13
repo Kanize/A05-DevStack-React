@@ -11,7 +11,7 @@ const Banner = () => {
                 <p className="text-lg md:text-xl text-gray-600 my-4">
                     Explore frontend, backend, database,<br/> and tooling options,
                     compare them side by side, and put together the stack <br/> that fits your next project.</p>
-                    <button className="btn btn-secondary gradient bg-linear-to-r from-[#F97316] to-[#EC4899]">Explore Technologies</button>
+                    <button className="btn btn-secondary gradient bg-linear-to-r from-[#F97316] to-[#EC4899] hover:bg-linear-to-l">Explore Technologies</button>
                     <button className="btn px-10 ml-4 ">Learn More</button>
             </div>
             <div>

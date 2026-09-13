@@ -20,7 +20,7 @@ const Nav = () => {
 
             <div>
                 <button className="btn border-none mr-2">Sign In</button>
-                <button className="btn btn-active btn-secondary rounded-3xl">Sign Up</button>
+                <button className="btn btn-active btn-secondary rounded-3xl hover:bg-orange-500">Sign Up</button>
             </div>
         </div>
         </div>
