@@ -26,6 +26,7 @@ Add technologies to your personal stack and easily see which technologies you ha
 Remove individual technologies from your stack or remove all selected technologies at once.
 
 
+Answer :
 
 1. What is JSX, and why is it used in React?
 

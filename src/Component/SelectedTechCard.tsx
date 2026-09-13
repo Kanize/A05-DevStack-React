@@ -35,7 +35,7 @@ const SelectedTechCard = ({
         {/* Remove button */}
         <button
             onClick={() => onRemove(technology.id)}
-            className="text-2xl text-gray-400 transition hover:text-gray-700"
+            className="text-2xl text-gray-400 transition hover:text-gray-700 cursor-pointer"
             title={`Remove ${technology.name}`}
         >
             <IoClose />
