@@ -49,7 +49,7 @@ const SelectedTech = ({
         {selectedTechnologies.length > 0 && (
         <button
             onClick={() => setSelectedTechnologies([])}
-            className="mt-6 w-full rounded-lg border border-red-300 py-2 text-sm font-medium text-red-500 transition hover:bg-red-50"
+            className="mt-6 w-full rounded-lg border border-red-300 py-2 text-sm font-medium text-red-500 transition hover:bg-red-50 cursor-pointer"
         >
             Remove All
         </button>
