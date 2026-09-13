@@ -1,6 +1,6 @@
 import { FaStar } from "react-icons/fa";
 import type { ItechnologiesType } from "../Type/TechnologiesType";
-import { useState, type Dispatch, type SetStateAction } from "react";
+import type { Dispatch, SetStateAction } from "react";
 import { Bounce, toast } from "react-toastify";
 
 interface TechnologiesCardProps {
@@ -13,10 +13,11 @@ const TechnologiesCard = ({
     technology, selectedTechnologies, setSelectedTechnologies
 }: TechnologiesCardProps) => {
 
-const [isSelected, setIsSelected] = useState(false);
+    const isSelected = selectedTechnologies.some(
+        (item) => item.id === technology.id
+    );
 
 const handleAddToStack = () => {
-        setIsSelected(true);
             toast.success('Technology added to stack!', {
             position: "bottom-right",
             autoClose: 5000,
