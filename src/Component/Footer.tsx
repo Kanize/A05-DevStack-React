@@ -4,8 +4,8 @@ import logo from "../assets/logo-text.png";
 const Footer = () => {
     return (
         <div className="border-t border-gray-200 pt-8">
-            <div className="container mx-auto grid grid-cols-4 md:grid-cols-4 gap-8">
-                <div>
+            <div className="container mx-auto grid grid-cols-4 md:grid-cols-4 gap-8 ">
+                <div className="ml-4">
                     <img src={logo} alt="Logo" />
                     <p className="text-gray-600 mt-2 text-[12px]">
                         Curated tools, technologies, and resources for developers building
@@ -41,9 +41,9 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="container mx-auto border-t border-gray-200 py-8 mt-20 flex justify-between items-center">
-                <p className="text-gray-600 text-[12px]">© 2026 Dev Stack. All rights reserved.</p>
-                <ul className="flex space-x-4 text-[12px]">
+            <div className="container mx-auto border-t  border-gray-200 py-8 mt-20 flex justify-between items-center">
+                <p className="text-gray-600 text-[12px] ml-4">© 2026 Dev Stack. All rights reserved.</p>
+                <ul className="flex space-x-4 text-[12px] mr-4">
                     <li><a href="#" className="text-gray-600 hover:text-[#DB2777] active:text-[#DB2777]">Privacy</a></li>
                     <li><a href="#" className="text-gray-600 hover:text-[#DB2777]">Terms</a></li>
                 </ul>
